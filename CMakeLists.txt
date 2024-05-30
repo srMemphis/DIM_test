@@ -13,3 +13,4 @@ project ("DIM_test")
 
 # Включите подпроекты.
 add_subdirectory ("DIM_test")
+
