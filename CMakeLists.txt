@@ -11,6 +11,9 @@ endif()
 
 project ("DIM_test")
 
+#link libs
+link_directories(${CMAKE_SOURCE_DIR}/lib/)
+
 # Включите подпроекты.
 add_subdirectory ("DIM_test")
 

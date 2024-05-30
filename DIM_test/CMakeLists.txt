@@ -13,4 +13,4 @@ endif()
 target_include_directories(DIM_test PUBLIC "${CMAKE_SOURCE_DIR}/include")
 
 #link libs
-target_link_libraries(DIM_test ${CMAKE_SOURCE_DIR}/lib/dim64.lib)
+target_link_libraries(DIM_test dim)
