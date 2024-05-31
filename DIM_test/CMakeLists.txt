@@ -14,3 +14,6 @@ target_include_directories(DIM_test PUBLIC "${CMAKE_SOURCE_DIR}/include")
 
 #link libs
 target_link_libraries(DIM_test dim)
+
+#copy dll next to the executable
+file(COPY ${CMAKE_SOURCE_DIR}/lib/dim.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
