@@ -1,7 +1,10 @@
 #include <iostream>
-#include "TestClient.h"
+#include <chrono>
+#include <thread>
+
 #include "dim/dim.h"
 
+#include "TestClient.h"
 
 class IntInfo : public DimInfo
 {
@@ -65,7 +68,7 @@ int main()
 
 	while (true)
 	{
-		Sleep(3000);
+		std::this_thread::sleep_for(std::chrono::milliseconds(3000));
 
 		// send non blocking command
 		TestClient::sendCommandNB("TEST/RUNTYPECMD", (char*)"TESTRUN");

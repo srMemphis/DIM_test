@@ -16,4 +16,6 @@ target_include_directories(Server_test PUBLIC "${CMAKE_SOURCE_DIR}/include")
 target_link_libraries(Server_test dim)
 
 #copy dll next to the executable
+if(WIN32)
 file(COPY ${CMAKE_SOURCE_DIR}/lib/dim.dll DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+endif()

@@ -1,8 +1,10 @@
 ﻿#include <iostream>
-#include "dim/dim.h"
+#include <chrono>
+#include <thread>
 
 #include "TestServer.h"
 
+#include "dim/dim.h"
 
 int main()
 {
@@ -20,7 +22,7 @@ int main()
 
 	while (true)
 	{
-		Sleep(1000);
+		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 		iServiceValue++;
 		intService.updateService();
 		std::cout << "Service updated with value " << iServiceValue << std::endl;
