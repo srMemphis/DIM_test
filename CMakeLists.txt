@@ -17,3 +17,4 @@ link_directories(${CMAKE_SOURCE_DIR}/lib/)
 # Включите подпроекты.
 add_subdirectory ("Server_test")
 add_subdirectory ("Client_test")
+add_subdirectory ("TestSubdetector")
